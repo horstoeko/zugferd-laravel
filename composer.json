@@ -1,0 +1,55 @@
+{
+    "name": "horstoeko/zugferd-laravel",
+    "keywords": ["zugferd","xrechnung","factur-x","electronic","invoice","laravel"],
+    "description": "A library for Laravel-Framework for creating and reading european electronic invoices",
+    "homepage": "https://github.com/horstoeko/zugferd-laravel",
+    "type": "package",
+    "license": "MIT",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Daniel Erling",
+            "email": "daniel@erling.com.de",
+            "role": "lead"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "horstoeko\\zugferdlaravel\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.3|^7.4|^8.0|^8.1",
+        "ext-json": "*",
+        "horstoeko/zugferd": "^1",
+        "doctrine/dbal": "^2.9|^3.1",
+        "illuminate/bus": ">=5.7",
+        "illuminate/contracts": ">=5.7",
+        "illuminate/database": ">=5.7",
+        "illuminate/http": ">=5.7",
+        "illuminate/pagination": ">=5.7",
+        "illuminate/support": ">=5.7",
+        "symfony/yaml": "^5.3|^6.0"
+    },
+    "require-dev": {
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "horstoeko\\zugferdlaravel\\ZugferdLaravelServiceProvider"
+            ],
+            "aliases": {
+                "LaravelZugferd": "horstoeko\\zugferdlaravel\\Facades\\ZugferdLaravel"
+            }
+        }
+    },
+    "scripts": {
+    }
+}
