@@ -22,6 +22,11 @@
             "horstoeko\\zugferdlaravel\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "horstoeko\\zugferdlaravel\\tests\\": "tests"
+        }
+    },
     "require": {
         "php": "^7.3|^7.4|^8.0|^8.1",
         "ext-json": "*",
