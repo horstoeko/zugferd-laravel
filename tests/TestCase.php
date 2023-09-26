@@ -1,6 +1,6 @@
 <?php
 
-namespace horstoeko\zugferd-laravel\tests;
+namespace horstoeko\zugferdlaravel\tests;
 
 use ReflectionClass;
 use ReflectionMethod;

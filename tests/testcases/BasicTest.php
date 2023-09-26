@@ -1,8 +1,8 @@
 <?php
 
-namespace horstoeko\zugferd-laravel\tests\testcases;
+namespace horstoeko\zugferdlaravel\tests\testcases;
 
-use horstoeko\zugferd-laravel\tests\TestCase;
+use horstoeko\zugferdlaravel\tests\TestCase;
 
 class BasicTest extends TestCase
 {
