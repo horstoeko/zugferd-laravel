@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Facade;
  * @method static \horstoeko\zugferd\ZugferdDocumentBuilder createDocumentInBasicWlProfile
  * @method static \horstoeko\zugferd\ZugferdDocumentBuilder createDocumentInEN16931Profile
  * @method static \horstoeko\zugferd\ZugferdDocumentBuilder createDocumentInExtendedProfile
- * @method static \horstoeko\zugferd\ZugferdDocumentBuilder createDocumentInXRechnungProfile
+ * @method static \horstoeko\zugferd\ZugferdDocumentBuilder createDocumentInXRechnung22Profile
+ * @method static \horstoeko\zugferd\ZugferdDocumentBuilder createDocumentInXRechnung23Profile
+ * @method static \horstoeko\zugferd\ZugferdDocumentBuilder createDocumentInXRechnung30Profile
  * @method static \horstoeko\zugferd\ZugferdDocumentReader readXmlFromFile(string $xmlfilename)
  * @method static \horstoeko\zugferd\ZugferdDocumentReader readXmlFromString(string $xmlcontent)
  * @method static \horstoeko\zugferd\ZugferdDocumentReader|null readXmlFromPdfFile(string $pdfFilename)

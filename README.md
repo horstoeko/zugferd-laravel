@@ -15,12 +15,22 @@ A simple ZUGFeRD/XRechnung/Factur-X Library for Laravel
   - [Dependencies](#dependencies)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [Create a new Document Builer in the MINIMUM-Profile](#create-a-new-document-builer-in-the-minimum-profile)
-    - [Create a new Document Builer in the BASIC-Profile](#create-a-new-document-builer-in-the-basic-profile)
-    - [Create a new Document Builer in the BASIC-WL-Profile](#create-a-new-document-builer-in-the-basic-wl-profile)
-    - [Create a new Document Builer in the EN16931-Profile (COMFORT-Profile)](#create-a-new-document-builer-in-the-en16931-profile-comfort-profile)
-    - [Create a new Document Builer in the EXTENDED-Profile](#create-a-new-document-builer-in-the-extended-profile)
-    - [Create a new Document Builer in the XRECHNUNG-Profile (Version 2.2)](#create-a-new-document-builer-in-the-xrechnung-profile-version-22)
+    - [Create a new Document Builder in the MINIMUM-Profile](#create-a-new-document-builder-in-the-minimum-profile)
+    - [Create a new Document Builder in the BASIC-Profile](#create-a-new-document-builder-in-the-basic-profile)
+    - [Create a new Document Builder in the BASIC-WL-Profile](#create-a-new-document-builder-in-the-basic-wl-profile)
+    - [Create a new Document Builder in the EN16931-Profile (COMFORT-Profile)](#create-a-new-document-builder-in-the-en16931-profile-comfort-profile)
+    - [Create a new Document Builder in the EXTENDED-Profile](#create-a-new-document-builder-in-the-extended-profile)
+    - [Create a new Document Builder in the XRECHNUNG-Profile (Version 2.2)](#create-a-new-document-builder-in-the-xrechnung-profile-version-22)
+    - [Create a new Document Builder in the XRECHNUNG-Profile (Version 2.3)](#create-a-new-document-builder-in-the-xrechnung-profile-version-23)
+    - [Create a new Document Builder in the XRECHNUNG-Profile (Version 3.0)](#create-a-new-document-builder-in-the-xrechnung-profile-version-30)
+    - [Create a Document Reader from an existing XML file](#create-a-document-reader-from-an-existing-xml-file)
+    - [Create a Document Reader from an XML string](#create-a-document-reader-from-an-xml-string)
+    - [Create a Document Reader from an existing PDF file (which has an attached XML file)](#create-a-document-reader-from-an-existing-pdf-file-which-has-an-attached-xml-file)
+    - [Create a merged PDF (XML as attachment) by the output of a ZugferdDocumentBuilder](#create-a-merged-pdf-xml-as-attachment-by-the-output-of-a-zugferddocumentbuilder)
+    - [Create a merged PDF by an existing XML file and existing PDF file](#create-a-merged-pdf-by-an-existing-xml-file-and-existing-pdf-file)
+    - [Create a merged PDF by an existing XML data string and existing PDF file](#create-a-merged-pdf-by-an-existing-xml-data-string-and-existing-pdf-file)
+    - [Create a merged PDF by an existing XML file and a PDF data string](#create-a-merged-pdf-by-an-existing-xml-file-and-a-pdf-data-string)
+    - [Create a merged PDF by an existing XML data string and a PDF data string](#create-a-merged-pdf-by-an-existing-xml-data-string-and-a-pdf-data-string)
 
 ## License
 
@@ -54,38 +64,119 @@ There is one recommended way to install `horstoeko/zugferd-laravel` via [Compose
 
 In general, you should read the [documentation](https://github.com/horstoeko/zugferd/blob/master/README.md) and [examples](https://github.com/horstoeko/zugferd/tree/master/examples) of the ```horstoeko/zugferd``` library before using this library.
 
-### Create a new Document Builer in the MINIMUM-Profile
+### Create a new Document Builder in the MINIMUM-Profile
 
 ```php
-$documentBuilder = ZugferdLaravel::createDocumentInMinimumProfile();
+$document = ZugferdLaravel::createDocumentInMinimumProfile();
 ```
 
-### Create a new Document Builer in the BASIC-Profile
+### Create a new Document Builder in the BASIC-Profile
 
 ```php
-$documentBuilder = ZugferdLaravel::createDocumentInBasicProfile();
+$document = ZugferdLaravel::createDocumentInBasicProfile();
 ```
 
-### Create a new Document Builer in the BASIC-WL-Profile
+### Create a new Document Builder in the BASIC-WL-Profile
 
 ```php
-$documentBuilder = ZugferdLaravel::createDocumentInBasicWlProfile();
+$document = ZugferdLaravel::createDocumentInBasicWlProfile();
 ```
 
-### Create a new Document Builer in the EN16931-Profile (COMFORT-Profile)
+### Create a new Document Builder in the EN16931-Profile (COMFORT-Profile)
 
 ```php
-$documentBuilder = ZugferdLaravel::createDocumentInEN16931Profile();
+$document = ZugferdLaravel::createDocumentInEN16931Profile();
 ```
 
-### Create a new Document Builer in the EXTENDED-Profile
+### Create a new Document Builder in the EXTENDED-Profile
 
 ```php
-$documentBuilder = ZugferdLaravel::createDocumentInExtendedProfile();
+$document = ZugferdLaravel::createDocumentInExtendedProfile();
 ```
 
-### Create a new Document Builer in the XRECHNUNG-Profile (Version 2.2)
+### Create a new Document Builder in the XRECHNUNG-Profile (Version 2.2)
 
 ```php
-$documentBuilder = ZugferdLaravel::createDocumentInXRechnungProfile();
+$document = ZugferdLaravel::createDocumentInXRechnung22Profile();
+```
+
+### Create a new Document Builder in the XRECHNUNG-Profile (Version 2.3)
+
+```php
+$document = ZugferdLaravel::createDocumentInXRechnung23Profile();
+```
+
+### Create a new Document Builder in the XRECHNUNG-Profile (Version 3.0)
+
+```php
+$document = ZugferdLaravel::createDocumentInXRechnung30Profile();
+```
+
+### Create a Document Reader from an existing XML file
+
+```php
+$document = ZugferdLaravel::readXmlFromFile('/path/to/file.xml');
+```
+
+### Create a Document Reader from an XML string
+
+```php
+$document = ZugferdLaravel::readXmlFromString('<xml>...</xml>');
+```
+
+### Create a Document Reader from an existing PDF file (which has an attached XML file)
+
+```php
+$document = ZugferdLaravel::readXmlFromPdfFile('/path/to/file.pdf');
+```
+
+### Create a merged PDF (XML as attachment) by the output of a ZugferdDocumentBuilder
+
+```php
+$document = ZugferdDocumentBuilder::CreateNew(ZugferdProfiles::PROFILE_EN16931);
+  $document
+    ->setDocumentInformation("471102", "380", \DateTime::createFromFormat("Ymd", "20180305"), "EUR")
+    ->....
+
+ZugferdLaravel::buildMergedPdfByDocumentBuilder($document, '/path/to/existing.pdf', '/path/to/merged.pdf');
+```
+
+### Create a merged PDF by an existing XML file and existing PDF file
+
+```php
+$xmlDataOrFilename = '/path/to/file.xml';
+$pdfDataOrFilename = '/path/to/file.pdf';
+$mergedPdfFilename = '/path/to/merged.pdf';
+
+ZugferdLaravel::buildMergedPdfByXmlDataOrXmlFilename($xmlDataOrFilename, $pdfDataOrFilename, $mergedPdfFilename);
+```
+
+### Create a merged PDF by an existing XML data string and existing PDF file
+
+```php
+$xmlDataOrFilename = '<?xml version="1.0" encoding="UTF-8"?><rsm:CrossIndustryInvoice.....';
+$pdfDataOrFilename = '/path/to/file.pdf';
+$mergedPdfFilename = '/path/to/merged.pdf';
+
+ZugferdLaravel::buildMergedPdfByXmlDataOrXmlFilename($xmlDataOrFilename, $pdfDataOrFilename, $mergedPdfFilename);
+```
+
+### Create a merged PDF by an existing XML file and a PDF data string
+
+```php
+$xmlDataOrFilename = '/path/to/file.xml';
+$pdfDataOrFilename = '%PDF-1.5....';
+$mergedPdfFilename = '/path/to/merged.pdf';
+
+ZugferdLaravel::buildMergedPdfByXmlDataOrXmlFilename($xmlDataOrFilename, $pdfDataOrFilename, $mergedPdfFilename);
+```
+
+### Create a merged PDF by an existing XML data string and a PDF data string
+
+```php
+$xmlDataOrFilename = '<?xml version="1.0" encoding="UTF-8"?><rsm:CrossIndustryInvoice....';
+$pdfDataOrFilename = '%PDF-1.5....';
+$mergedPdfFilename = '/path/to/merged.pdf';
+
+ZugferdLaravel::buildMergedPdfByXmlDataOrXmlFilename($xmlDataOrFilename, $pdfDataOrFilename, $mergedPdfFilename);
 ```

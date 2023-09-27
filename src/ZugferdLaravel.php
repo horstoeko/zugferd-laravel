@@ -62,13 +62,33 @@ class ZugferdLaravel
     }
 
     /**
-     * Create a new document in EXTENDED-Profile
+     * Create a new document in XRECHNUNG-Profile (Version 2.2)
      *
      * @return ZugferdDocumentBuilder
      */
-    public function createDocumentInXRechnungProfile(): ZugferdDocumentBuilder
+    public function createDocumentInXRechnung22Profile(): ZugferdDocumentBuilder
     {
         return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_XRECHNUNG_2_2);
+    }
+
+    /**
+     * Create a new document in XRECHNUNG-Profile (Version 2.3)
+     *
+     * @return ZugferdDocumentBuilder
+     */
+    public function createDocumentInXRechnung23Profile(): ZugferdDocumentBuilder
+    {
+        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_XRECHNUNG_2_3);
+    }
+
+    /**
+     * Create a new document in XRECHNUNG-Profile (Version 3.0)
+     *
+     * @return ZugferdDocumentBuilder
+     */
+    public function createDocumentInXRechnung30Profile(): ZugferdDocumentBuilder
+    {
+        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_XRECHNUNG_3);
     }
 
     /**
