@@ -64,6 +64,14 @@ There is one recommended way to install `horstoeko/zugferd-laravel` via [Compose
 
 In general, you should read the [documentation](https://github.com/horstoeko/zugferd/blob/master/README.md) and [examples](https://github.com/horstoeko/zugferd/tree/master/examples) of the ```horstoeko/zugferd``` library before using this library.
 
+This package provides a facade ```ZugferdLaravel``` which is used in the following examples.
+
+Just add an use clause in the form of
+
+```php
+use horstoeko\zugferdlaravel\Facades\ZugferdLaravel;
+```
+
 ### Create a new Document Builder in the MINIMUM-Profile
 
 ```php
