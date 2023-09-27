@@ -141,8 +141,9 @@ $document = ZugferdLaravel::readXmlFromPdfFile('/path/to/file.pdf');
 ### Create a merged PDF (XML as attachment) by the output of a ZugferdDocumentBuilder
 
 ```php
-$document = ZugferdDocumentBuilder::CreateNew(ZugferdProfiles::PROFILE_EN16931);
-  $document
+$document = ZugferdLaravel::createDocumentInEN16931Profile();
+
+$document
     ->setDocumentInformation("471102", "380", \DateTime::createFromFormat("Ymd", "20180305"), "EUR")
     ->....
 
