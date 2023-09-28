@@ -147,7 +147,10 @@ $document
     ->setDocumentInformation("471102", "380", \DateTime::createFromFormat("Ymd", "20180305"), "EUR")
     ->....
 
-ZugferdLaravel::buildMergedPdfByDocumentBuilder($document, '/path/to/existing.pdf', '/path/to/merged.pdf');
+$pdfDataOrFilename = '/path/to/file.pdf';
+$mergedPdfFilename = '/path/to/merged.pdf';
+
+ZugferdLaravel::buildMergedPdfByDocumentBuilder($document, $pdfDataOrFilename, $mergedPdfFilename);
 ```
 
 ### Create a merged PDF by an existing XML file and existing PDF file
