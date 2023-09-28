@@ -145,7 +145,7 @@ $document = ZugferdLaravel::createDocumentInEN16931Profile();
 
 $document
     ->setDocumentInformation("471102", "380", \DateTime::createFromFormat("Ymd", "20180305"), "EUR")
-    ->....
+    ->....;
 
 $pdfDataOrFilename = '/path/to/file.pdf';
 $mergedPdfFilename = '/path/to/merged.pdf';
