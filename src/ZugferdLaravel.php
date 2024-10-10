@@ -18,7 +18,7 @@ class ZugferdLaravel
      */
     public function createDocumentInMinimumProfile(): ZugferdDocumentBuilder
     {
-        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_MINIMUM);
+        return ZugferdDocumentBuilder::createNew(ZugferdProfiles::PROFILE_MINIMUM);
     }
 
     /**
@@ -28,7 +28,7 @@ class ZugferdLaravel
      */
     public function createDocumentInBasicProfile(): ZugferdDocumentBuilder
     {
-        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_BASIC);
+        return ZugferdDocumentBuilder::createNew(ZugferdProfiles::PROFILE_BASIC);
     }
 
     /**
@@ -38,7 +38,7 @@ class ZugferdLaravel
      */
     public function createDocumentInBasicWlProfile(): ZugferdDocumentBuilder
     {
-        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_BASICWL);
+        return ZugferdDocumentBuilder::createNew(ZugferdProfiles::PROFILE_BASICWL);
     }
 
     /**
@@ -48,7 +48,7 @@ class ZugferdLaravel
      */
     public function createDocumentInEN16931Profile(): ZugferdDocumentBuilder
     {
-        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_EN16931);
+        return ZugferdDocumentBuilder::createNew(ZugferdProfiles::PROFILE_EN16931);
     }
 
     /**
@@ -58,7 +58,7 @@ class ZugferdLaravel
      */
     public function createDocumentInExtendedProfile(): ZugferdDocumentBuilder
     {
-        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_EXTENDED);
+        return ZugferdDocumentBuilder::createNew(ZugferdProfiles::PROFILE_EXTENDED);
     }
 
     /**
@@ -68,7 +68,7 @@ class ZugferdLaravel
      */
     public function createDocumentInXRechnung22Profile(): ZugferdDocumentBuilder
     {
-        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_XRECHNUNG_2_2);
+        return ZugferdDocumentBuilder::createNew(ZugferdProfiles::PROFILE_XRECHNUNG_2_2);
     }
 
     /**
@@ -78,7 +78,7 @@ class ZugferdLaravel
      */
     public function createDocumentInXRechnung23Profile(): ZugferdDocumentBuilder
     {
-        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_XRECHNUNG_2_3);
+        return ZugferdDocumentBuilder::createNew(ZugferdProfiles::PROFILE_XRECHNUNG_2_3);
     }
 
     /**
@@ -88,7 +88,7 @@ class ZugferdLaravel
      */
     public function createDocumentInXRechnung30Profile(): ZugferdDocumentBuilder
     {
-        return new ZugferdDocumentBuilder(ZugferdProfiles::PROFILE_XRECHNUNG_3);
+        return ZugferdDocumentBuilder::createNew(ZugferdProfiles::PROFILE_XRECHNUNG_3);
     }
 
     /**
