@@ -1,8 +1,8 @@
 # ZUGFeRD/XRechnung/Factur-X for Laravel
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/horstoeko/zugferdmail.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferdmail)
-[![PHP version](https://img.shields.io/packagist/php-v/horstoeko/zugferdmail.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferdmail)
-[![License](https://img.shields.io/packagist/l/horstoeko/zugferdmail.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferdmail)
+[![Latest Stable Version](https://img.shields.io/packagist/v/horstoeko/zugferd-laravel.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferd-laravel)
+[![PHP version](https://img.shields.io/packagist/php-v/horstoeko/zugferd-laravel.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferd-laravel)
+[![License](https://img.shields.io/packagist/l/horstoeko/zugferd-laravel.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferd-laravel)
 
 <!--
 [![CI (Ant, PHP 7.3)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php73.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php73.ant.yml) 
@@ -13,8 +13,8 @@
 [![CI (PHP 8.3)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php83.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php83.ant.yml)
 -->
 
-[![Build Status](https://github.com/horstoeko/zugferdmail/actions/workflows/build.ci.yml/badge.svg)](https://github.com/horstoeko/zugferdmail/actions/workflows/build.ci.yml)
-[![Release Status](https://github.com/horstoeko/zugferdmail/actions/workflows/build.release.yml/badge.svg)](https://github.com/horstoeko/zugferdmail/actions/workflows/build.release.yml)
+[![Build Status](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.ci.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.ci.yml)
+[![Release Status](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.release.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.release.yml)
 
 A simple ZUGFeRD/XRechnung/Factur-X Library for Laravel
 
