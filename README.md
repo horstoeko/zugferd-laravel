@@ -1,8 +1,20 @@
 # ZUGFeRD/XRechnung/Factur-X for Laravel
 
-[![Latest Stable Version](https://poser.pugx.org/horstoeko/zugferd-laravel/v/stable.png)](https://packagist.org/packages/horstoeko/zugferd-laravel) [![Total Downloads](https://poser.pugx.org/horstoeko/zugferd-laravel/downloads.png)](https://packagist.org/packages/horstoeko/zugferd-laravel) [![Latest Unstable Version](https://poser.pugx.org/horstoeko/zugferd-laravel/v/unstable.png)](https://packagist.org/packages/horstoeko/zugferd-laravel) [![License](https://poser.pugx.org/horstoeko/zugferd/license.png)](https://packagist.org/packages/horstoeko/zugferd) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/horstoeko/zugferd)
+[![Latest Stable Version](https://img.shields.io/packagist/v/horstoeko/zugferdmail.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferdmail)
+[![PHP version](https://img.shields.io/packagist/php-v/horstoeko/zugferdmail.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferdmail)
+[![License](https://img.shields.io/packagist/l/horstoeko/zugferdmail.svg?style=plastic)](https://packagist.org/packages/horstoeko/zugferdmail)
 
-[![CI (Ant, PHP 7.3)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php73.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php73.ant.yml) [![CI (Ant, PHP 7.4)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php74.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php74.ant.yml) [![CI (PHP 8.0)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php80.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php80.ant.yml) [![CI (PHP 8.1)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php81.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php81.ant.yml)
+<!--
+[![CI (Ant, PHP 7.3)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php73.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php73.ant.yml) 
+[![CI (Ant, PHP 7.4)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php74.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php74.ant.yml)
+[![CI (PHP 8.0)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php80.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php80.ant.yml)
+[![CI (PHP 8.1)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php81.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php81.ant.yml)
+[![CI (PHP 8.2)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php82.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php82.ant.yml)
+[![CI (PHP 8.3)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php83.ant.yml/badge.svg)](https://github.com/horstoeko/zugferd-laravel/actions/workflows/build.php83.ant.yml)
+-->
+
+[![Build Status](https://github.com/horstoeko/zugferdmail/actions/workflows/build.ci.yml/badge.svg)](https://github.com/horstoeko/zugferdmail/actions/workflows/build.ci.yml)
+[![Release Status](https://github.com/horstoeko/zugferdmail/actions/workflows/build.release.yml/badge.svg)](https://github.com/horstoeko/zugferdmail/actions/workflows/build.release.yml)
 
 A simple ZUGFeRD/XRechnung/Factur-X Library for Laravel
 

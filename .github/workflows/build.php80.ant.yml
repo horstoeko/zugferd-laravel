@@ -9,6 +9,13 @@ on:
     paths-ignore:
       - '**.md'
       - '.github/**'
+      - 'examples/**'
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'master'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -16,17 +23,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup PHP with PECL extension
         uses: shivammathur/setup-php@v2
         with:
             php-version: '8.0'
-            extensions: imagick, swoole      
+            extensions: imagick, swoole
             coverage: xdebug
       - name: Build with Ant
         run: ant -noinput -buildfile build.ant.xml
       - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: github.event_name != 'pull_request'
         with:
             files: "./build/logs/junit.xml"

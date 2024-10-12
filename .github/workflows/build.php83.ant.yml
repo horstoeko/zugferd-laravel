@@ -1,13 +1,21 @@
-name: Release
+name: CI (Ant, PHP 8.3)
 
 on:
   push:
-    tags:
-      - "v*"
+    tags-ignore:
+      - '**'
+    branches:
+      - '**'
     paths-ignore:
       - '**.md'
       - '.github/**'
       - 'examples/**'
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'master'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -19,21 +27,13 @@ jobs:
       - name: Setup PHP with PECL extension
         uses: shivammathur/setup-php@v2
         with:
-            php-version: '8.1'
+            php-version: '8.3'
             extensions: imagick, swoole
             coverage: xdebug
       - name: Build with Ant
         run: ant -noinput -buildfile build.ant.xml
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
+        if: github.event_name != 'pull_request'
         with:
             files: "./build/logs/junit.xml"
-      - name: Make Release
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-            repo_token: "${{ secrets.GITHUB_TOKEN }}"
-            prerelease: false
-            files: |
-                build/dist/doc.zip
-                build/dist/builddoc.zip
