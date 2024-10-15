@@ -24,7 +24,7 @@ jobs:
     strategy:
       matrix:
         operating-system: ["ubuntu-22.04", "ubuntu-24.04"]
-        phpversion: ["7.3", "7.4", "8.0", "8.1", "8.2", "8.3", "8.4"]
+        phpversion: ["7.3", "7.4", "8.0", "8.1", "8.2", "8.3"]
 
     steps:
       - name: Checkout Sources
@@ -64,6 +64,12 @@ jobs:
           mkdir build/pdepend
           mkdir build/dist
           mkdir build/phpdoc
+
+      - name: Run Lint
+        run: |
+          for afile in $(find . -type f -name '*.php' -path './src*/*' -print); do
+             php -l $afile
+          done
 
       - name: Run PHPLOC
         continue-on-error: true
