@@ -38,7 +38,7 @@
         "illuminate/http": ">=5.7",
         "illuminate/pagination": ">=5.7",
         "illuminate/support": ">=5.7",
-        "symfony/yaml": "^5.3|^6.0"
+        "symfony/yaml": "^5|^6|^7"
     },
     "require-dev": {
         "pdepend/pdepend": "^2",
