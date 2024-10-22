@@ -28,10 +28,10 @@
         }
     },
     "require": {
-        "php": "^7.3|^7.4|^8.0|^8.1",
+        "php": "^7.3|^7.4|^8",
         "ext-json": "*",
         "horstoeko/zugferd": "^1",
-        "doctrine/dbal": "^2.9|^3.1",
+        "doctrine/dbal": "^2.9|^3|^4",
         "illuminate/bus": ">=5.7",
         "illuminate/contracts": ">=5.7",
         "illuminate/database": ">=5.7",
