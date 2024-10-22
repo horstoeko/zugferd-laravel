@@ -2,6 +2,7 @@
 
 namespace horstoeko\zugferdlaravel;
 
+use Exception;
 use horstoeko\zugferd\ZugferdDocumentBuilder;
 use horstoeko\zugferd\ZugferdDocumentPdfBuilder;
 use horstoeko\zugferd\ZugferdDocumentPdfMerger;
