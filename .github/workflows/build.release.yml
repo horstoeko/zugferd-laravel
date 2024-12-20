@@ -11,8 +11,19 @@ on:
       - "make/**"
 
 env:
+  VALIDATORURL: https://github.com/itplr-kosit/validator/releases/download/v1.5.0/validator-1.5.0-distribution.zip
+  VALIDATORSCENARIOURL: https://github.com/itplr-kosit/validator-configuration-xrechnung/releases/download/release-2023-07-31/validator-configuration-xrechnung_3.0.0_2023-07-31.zip
+  VALIDATORPATH: build/validator
+  VALIDATORZIPFILENAME: validator.zip
+  VALIDATORSCENARIOZIPFILENAME: validator-configuration.zip
+  VALIDATORJARFILENAME: validationtool-1.5.0-standalone.jar
+  VALIDATORSCENARIOFILENAME: scenarios.xml
   PHPDOCUMENTORURL: https://phpdoc.org/phpDocumentor.phar
   PHPDOCUMENTORFILENAME: phpDocumentor.phar
+  VERAPDFURL: https://software.verapdf.org/rel/verapdf-installer.zip
+  VERAPDFPATH: build/verapdf
+  VERAPDFZIPFILENAME: verapdf.zip
+  GH_PAT: ${{ secrets.UPDATEWIKITOKEN }}
 
 jobs:
   build:
