@@ -8,6 +8,7 @@ on:
       - "**.md"
       - ".github/**"
       - "examples/**"
+      - "make/**"
 
 env:
   PHPDOCUMENTORURL: https://phpdoc.org/phpDocumentor.phar
@@ -117,11 +118,18 @@ jobs:
         continue-on-error: true
         run: |
           zip -r build/dist/doc.zip build/doc
+          zip -r build/dist/builddoc.zip build/builddoc build/coverage build/coverage-html build/logs build/pdepend build/phpdoc
 
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: "build/logs/junit.xml"
+
+      - name: Publish Build Logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: Build log artifacts for ubuntu-24.04 PHP 8.3 (Release)
+          path: build/logs
 
       - name: Make Release
         uses: "marvinpinto/action-automatic-releases@latest"
@@ -130,3 +138,4 @@ jobs:
           prerelease: false
           files: |
             build/dist/doc.zip
+            build/dist/builddoc.zip
