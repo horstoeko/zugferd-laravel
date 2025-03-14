@@ -37,7 +37,7 @@ abstract class TestCase extends PhpUnitTestCase
     public static function tearDownAfterClass(): void
     {
         foreach (self::$registeredTestCaseFiles as $registeredTestCaseFile) {
-            if (file_exists($registeredTestCaseFile) && is_writeable($registeredTestCaseFile)) {
+            if (file_exists($registeredTestCaseFile) && is_writable($registeredTestCaseFile)) {
                 @unlink($registeredTestCaseFile);
             }
         }
@@ -63,7 +63,7 @@ abstract class TestCase extends PhpUnitTestCase
         parent::tearDown();
 
         foreach ($this->registeredTestFiles as $registeredTestFile) {
-            if (file_exists($registeredTestFile) && is_writeable($registeredTestFile)) {
+            if (file_exists($registeredTestFile) && is_writable($registeredTestFile)) {
                 @unlink($registeredTestFile);
             }
         }

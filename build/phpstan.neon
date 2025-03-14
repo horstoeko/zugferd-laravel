@@ -4,5 +4,3 @@ parameters:
         - ../tests
     level: 5
     treatPhpDocTypesAsCertain: false
-    excludePaths:
-        - ../src/entities/*

@@ -95,7 +95,7 @@ class ZugferdLaravel
     /**
      * Read the content of a xml file
      *
-     * @param string $xmlfilename
+     * @param  string $xmlfilename
      * @return ZugferdDocumentReader
      * @throws Exception
      */
@@ -107,7 +107,7 @@ class ZugferdLaravel
     /**
      * Read the content of a xml string
      *
-     * @param string $xmlcontent
+     * @param  string $xmlcontent
      * @return ZugferdDocumentReader
      * @throws Exception
      */
@@ -119,7 +119,7 @@ class ZugferdLaravel
     /**
      * Read the content of a pdf containing the xml data (as attached file)
      *
-     * @param string $pdfFilename
+     * @param  string $pdfFilename
      * @return ZugferdDocumentReader|null
      */
     public function readXmlFromPdfFile(string $pdfFilename): ?ZugferdDocumentReader
@@ -130,9 +130,9 @@ class ZugferdLaravel
     /**
      * Create a merged PDF (XML as attachment) by the output of a ZugferdDocumentBuilder
      *
-     * @param ZugferdDocumentBuilder $zugferdDocumentBuilder
-     * @param string $originalPdfDataOrPdfFilename
-     * @param string $toPdfFilename
+     * @param  ZugferdDocumentBuilder $zugferdDocumentBuilder
+     * @param  string                 $originalPdfDataOrPdfFilename
+     * @param  string                 $toPdfFilename
      * @return void
      */
     public function buildMergedPdfByDocumentBuilder(ZugferdDocumentBuilder $zugferdDocumentBuilder, string $originalPdfDataOrPdfFilename, string $toPdfFilename): void
@@ -144,9 +144,9 @@ class ZugferdLaravel
     /**
      * Create a merged PDF (XML as attachment) by an existing XML filename or XML-Data-String
      *
-     * @param string $xmlDataOrFilename
-     * @param string $originalPdfDataOrPdfFilename
-     * @param string $toPdfFilename
+     * @param  string $xmlDataOrFilename
+     * @param  string $originalPdfDataOrPdfFilename
+     * @param  string $toPdfFilename
      * @return void
      */
     public function buildMergedPdfByXmlDataOrXmlFilename(string $xmlDataOrFilename, string $originalPdfDataOrPdfFilename, string $toPdfFilename): void
@@ -158,9 +158,9 @@ class ZugferdLaravel
     /**
      * Create a merged PDF (XML as attachment) by a ZugferdDocumentBuilder or a XML filename or XML-Data-String
      *
-     * @param \horstoeko\zugferd\ZugferdDocumentBuilder|string $xmlContainer
-     * @param string $originalPdfDataOrPdfFilename
-     * @param string $toPdfFilename
+     * @param  \horstoeko\zugferd\ZugferdDocumentBuilder|string $xmlContainer
+     * @param  string                                           $originalPdfDataOrPdfFilename
+     * @param  string                                           $toPdfFilename
      * @return void
      */
     public function buildMergedPdf($xmlContainer, string $originalPdfDataOrPdfFilename, string $toPdfFilename): void
